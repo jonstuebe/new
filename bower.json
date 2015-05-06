@@ -1,0 +1,32 @@
+{
+  "name": "mccd-brochure",
+  "version": "0.0.0",
+  "homepage": "https://github.com/jonstuebe/new",
+  "authors": [
+    "Jon Stuebe <jstuebe@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~1.11.2",
+    "isInViewport": "~2.2.3",
+    "skrollr": "~0.6.29",
+    "selectivizr": "~1.0.2",
+    "html5shiv": "~3.7.2",
+    "respond": "~1.4.2",
+    "skrollr-stylesheets": "~1.0.0",
+    "swiper": "~3.0.6",
+    "jquery-reel": "~1.3.0",
+    "mediaelement": "~2.16.4",
+    "foundation": "~5.5.2"
+  },
+  "resolutions": {
+    "jquery": ">= 2.1.0"
+  }
+}
