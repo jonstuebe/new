@@ -1,6 +1,8 @@
 @import "normalize";
 
 @import "bourbon";
-@import "neat";
+@import "susy";
+// @import "neat/neat"; // currently does not support eyeglass
 
 @import "mixins";
+@import "simplysass";
