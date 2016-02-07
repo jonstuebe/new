@@ -8,6 +8,7 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     bourbon = require('node-bourbon'),
     neat = require('node-neat'),
+    eyeglass = require("eyeglass"),
     // babel = require('gulp-babel'), // needed for react
     concat = require('gulp-concat'),
     browserSync = require('browser-sync').create(),
@@ -27,9 +28,7 @@ gulp.task('styles.prod', function(){
 
 	gulp.src(paths.styles)
     	.pipe(changed(paths.output.styles, { extension: '.css' }))
-    	.pipe(sass({
-    		includePaths: neat.includePaths
-        }))
+    	.pipe(sass(eyeglass()).on('error', sass.logError))
         .pipe(autoprefixer({
             browsers: ['last 3 versions']
         }))
@@ -48,12 +47,8 @@ gulp.task('styles', function()
 {
     gulp.src(paths.styles)
         .pipe(changed(paths.output.styles, { extension: '.css' }))
-        .pipe(plumber())
         .pipe(sourcemaps.init())
-        .pipe(sass({
-            includePaths: neat.includePaths,
-            sourceMap: true
-        }))
+        .pipe(sass(eyeglass({ sourceMap: true })).on('error', sass.logError))
         // .pipe(autoprefixer({
         //     browsers: ['last 3 versions']
         // }))
