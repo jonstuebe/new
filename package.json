@@ -13,6 +13,7 @@
   "homepage": "https://github.com/jonstuebe/new",
   "devDependencies": {
     "babel": "~5.8.23",
+    "eyeglass": "^0.8.2",
     "gulp-babel": "~5.2.1",
     "gulp-sourcemaps": "~1.6.0",
     "gulp-concat": "~2.6.0",
